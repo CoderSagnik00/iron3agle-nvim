@@ -43,14 +43,22 @@ return {
       },
       extensions = {
         ["ui-select"] = require("telescope.themes").get_cursor({
-          winblend=15
-        })
-      }
+          winblend = 15,
+        }),
+      },
     },
     config = function(_, opts)
       require("telescope").setup(opts)
       require("telescope").load_extension("ui-select")
     end,
   },
+  {
+    {
+      "rmagatti/session-lens",
+      dependencies = { "nvim-telescope/telescope.nvim" },
+      config = function()
+        require("telescope").load_extension("session-lens")
+      end,
+    },
+  },
 }
-

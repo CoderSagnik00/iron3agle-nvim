@@ -25,6 +25,7 @@ return {
         dashboard.button("e", "  New file", "<cmd>ene<CR>"),
         dashboard.button("f", "󰈞  Find file", "<cmd>Telescope find_files<CR>"),
         dashboard.button("r", "  Recent files", "<cmd>Telescope oldfiles<CR>"),
+        dashboard.button("o", "  Open project", "<cmd>Telescope session-lens search_session<CR>"),
         dashboard.button("g", "󰈬  Live grep", "<cmd>Telescope live_grep<CR>"),
         dashboard.button("q", "  Quit", "<cmd>qa<CR>"),
       }
