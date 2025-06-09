@@ -1,10 +1,13 @@
 return {
   {
     "nvim-telescope/telescope.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope-ui-select.nvim",
+    },
     keys = {
       {
-        "<leader>ff", 
+        "<leader>ff",
         "<cmd>Telescope find_files<CR>",
         desc = "Find Files",
       },
@@ -24,7 +27,7 @@ return {
         desc = "Find Help Tags",
       },
       {
-        "<leader>/",  
+        "<leader>/",
         "<cmd>Telescope current_buffer_fuzzy_find<CR>",
         desc = "Fuzzy Search in Current File",
       },
@@ -36,9 +39,18 @@ return {
           prompt_position = "bottom",
         },
         sorting_strategy = "ascending",
-        winblend = 0,
+        winblend = 15,
       },
+      extensions = {
+        ["ui-select"] = require("telescope.themes").get_cursor({
+          winblend=15
+        })
+      }
     },
+    config = function(_, opts)
+      require("telescope").setup(opts)
+      require("telescope").load_extension("ui-select")
+    end,
   },
 }
 
