@@ -16,7 +16,12 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
-      require("lspconfig").lua_ls.setup({})
+      local lspconfig = require("lspconfig")
+      local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
+      lspconfig.lua_ls.setup({capabilities = capabilities})
+
+
       vim.keymap.set('n', 'H', vim.lsp.buf.hover, { desc = "LSP Hover Docs" })
       vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = "LSP code actions" })
       vim.keymap.set('n', '<F2>', vim.lsp.buf.rename, { desc = "LSP rename symbol" })
