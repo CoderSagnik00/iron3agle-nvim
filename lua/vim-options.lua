@@ -4,4 +4,7 @@ vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.cmd("set number")
 vim.cmd("set relativenumber")
+vim.keymap.set('v', '<C-c>', function()
+  vim.cmd('normal! "+y')
+end, { desc = "Copy to clipboard" })
 vim.g.mapleader = " "
