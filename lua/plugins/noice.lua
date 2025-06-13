@@ -28,7 +28,6 @@ return {
             col = "50%",
           },
           size = {
-            min_width = 100,
             width = "auto",
             height = "auto",
           },
