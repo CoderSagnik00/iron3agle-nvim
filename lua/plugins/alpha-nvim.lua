@@ -32,7 +32,7 @@ return {
 
       -- 💅 Footer
       dashboard.section.footer.val = {
-        "󰙨  The Sky Is Never the Limit - Iron3agle",
+        "Fuck Society \u{1F595}"
       }
 
       -- 🧼 Layout tweaks
