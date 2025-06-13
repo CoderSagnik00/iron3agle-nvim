@@ -22,7 +22,7 @@ return {
 
       -- 🚀 Buttons (Custom Menu Options)
       dashboard.section.buttons.val = {
-        dashboard.button("e", "  New file", "<cmd>ene<CR>"),
+         dashboard.button("e", "  New file", "<cmd>ene<CR>"),
         dashboard.button("f", "󰈞  Find file", "<cmd>Telescope find_files<CR>"),
         dashboard.button("r", "  Recent files", "<cmd>Telescope oldfiles<CR>"),
         dashboard.button("o", "  Open project", "<cmd>Telescope session-lens search_session<CR>"),

@@ -40,8 +40,7 @@ return {
 
       -- Pick and close buffers
       map("n", "<leader>bp", "<cmd>BufferLinePick<CR>", opts)
-      map("n", "Q", "<cmd>bd<CR>", opts)
-      map("n", "<C-q>", "<cmd>bd!<CR>", opts)
+      map("n", "Q", "<cmd>bd!<CR>", opts)
 
       -- Sort buffers
       map("n", "<leader>bsd", "<cmd>BufferLineSortByDirectory<CR>", opts)

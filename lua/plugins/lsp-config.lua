@@ -9,7 +9,7 @@ return {
     "mason-org/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls" }
+        ensure_installed = { "lua_ls", "bashls" }
       })
     end,
   },
@@ -20,6 +20,7 @@ return {
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
       lspconfig.lua_ls.setup({capabilities = capabilities})
+      lspconfig.basls.setup({capabilities = capabilities})
 
 
       vim.keymap.set('n', 'H', vim.lsp.buf.hover, { desc = "LSP Hover Docs" })
